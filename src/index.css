@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  background-color: rgb(242, 242, 242);
+}
+.FeatureSection{
+  background-color: rgb(7, 7, 50);
+}
+.PrimaryButton{
+  width: auto;
+  color: antiquewhite;
+  font-weight: bolder;
+  border-radius: 40px;
+  transition: all .1s ease-in;
+  padding: 10px 10PX;
+  min-width: 150px;
+  
+
+}
+
+
+.carouselitem{
+  height: 1000px;
+}
+.PrimaryButton:hover{
+  background-color: rgb(255, 0, 85);
+}
+
+.prject{
+  height: 600px;
+}
+
+.PrimaryHeader{
+  background-color: rgb(216, 227, 233)!important;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  section.PrimaryHeader{
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(236, 236, 236);
+  }
+
+  .toggleButton{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 50px;
+    width: 50px;
+  }
+  .toggleButton > div{
+    height: 5px;
+
+    width: 30px;
+    background-color: red;
+    margin-top: 5px;
+  }
+
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
+
+  .heroSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16, 13, 43);
+  }
+
+  .heroSection > *{
+    color: white;
+    font-family:  sans-serif;
+  }
+
+  .heroSection > h3{
+    font-size: 20px;
+    color: rgb(179, 179, 179);
+  }
+
+  .heroSection > h1{
+    font-size: 53px;
+    font-weight:bolder;
+  }
+
+
+.services{
+  margin: 0 10px;
+}
+
+  .card{
+    max-width: 100%;
+    height: 35vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+  
+  }
+
+  .founder{
+    width: 100%;
+    height: 100vh;
+  }
+
+  .Features{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: start;
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(16, 13, 43);
+    padding: 20px 0;
+  }
+
+  .Awards{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+ 
+
+  .Awards > div> img{
+    
+    width: 150px;
+    height: 150px;
+  }
+  .FeatureImage{
+    padding:  5px 10px;
+    border-radius: 20px;
+  }
+
+
+  .teamText{
+    padding: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+  }
+  .emailButtom{
+    display: flex;
+    justify-content: center;
+  }
+
+  }
+
+
+  .projectImg > img{
+    width: 400px;
+  }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        .gridV2{
+            display: grid;
+            gap: 1rem;
+            grid-template-areas: 
+            "a b c d"
+            'e f g h'
+            'i j k l'
+            'm n o p';
+            grid-template-rows: repeat(4 , 20%);
+            grid-template-columns: 200px, auto, auto, 200px;
+        }
+        .itemV{
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            transition: .2s ease;
+        }
+        .itemV:hover{
+            background-color: #ccc;
+            transform: scale(110%);
+        }
+        .itemV::before {
+            counter-increment: section;
+            content: counter(section);
+        }
+        .itemV::before{
+            counter-increment: section;
+            content: counter(section);
+        }
+    </style>
+</head>
+<body>
+    
+
+<section class="gridV2">
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+    <div class="itemV"></div>
+</section>
+ 
+</body>
+</html>
