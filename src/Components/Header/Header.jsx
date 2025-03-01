@@ -11,7 +11,7 @@ export default function Header(props) {
 
     const menuLinks = [
         { name: "Home", href: "/" },
-        { name: "Services", href: "/" },
+        { name: "Services", href: "/Services" },
         { name: "Pricing", href: "/" },
         { name: "About Us", href: "/" },
         { name: "Careers", href: "/" },
