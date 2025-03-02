@@ -31,7 +31,7 @@ export default function HeroSection(props) {
 
 
   return (
-    <div class="overflow-hidden bg-slate-950 h-screen  lg:h-3/6 lg:pb-52" >
+    <div class=" bg-slate-950 h-screen md:h-[600px] lg:h-3/6 lg:pb-52 lg:pl-40" >
         <div className="mx-auto container relative px-6 pt-7 xl:px-0">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center">
           <div className="xl:mt-8">

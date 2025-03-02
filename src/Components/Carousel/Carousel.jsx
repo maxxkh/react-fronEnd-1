@@ -29,24 +29,24 @@ const NewsCarousel = ({ items, autoPlay = true, interval = 5000 }) => {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="relative h-96 md:h-[500px]">
+      <div className="relative   h-96 md:h-[500px]">
         {items.map((item, index) => (
           <div
             key={item.id}
-            className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+            className={`absolute  inset-0 transition-all duration-500 ease-in-out ${
               index === activeIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
             }`}
             aria-hidden={index !== activeIndex}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center brightness-75"
+              className="absolute  inset-0 bg-cover bg-center brightness-75"
               style={{ backgroundImage: `url(${item.imageUrl})` }}
             />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
-              <div className={`transform transition-all duration-300 ease-out ${
+            <div className="absolute  bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
+              <div className={`transform  transition-all duration-300 ease-out ${
                 index === activeIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
               }`}>
-                <h3 className="text-xl md:text-3xl font-bold text-white mb-3 md:mb-4">
+                <h3 className="text-xl  md:text-3xl font-bold text-white mb-3 md:mb-4">
                   {item.title}
                 </h3>
                 <p className="text-sm md:text-base text-gray-200 max-w-2xl">

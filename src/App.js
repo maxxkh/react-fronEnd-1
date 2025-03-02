@@ -5,7 +5,7 @@ import HomePage from './Pages/HomePage/HomePage';
 import ServicesPage from './Pages/Services/ServicesPage';
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/react-fronEnd-1">
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

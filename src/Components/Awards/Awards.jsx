@@ -17,7 +17,7 @@ export default function Awards() {
     ];
 
     return (
-        <section className="p-6 lg:p-16 bg-gray-50">
+        <section className="p-6 lg:p-16 bg-gray-50 ">
             {/* Header Section */}
             <div className="text-center mb-8 lg:mb-12">
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900">Awards</h3>
@@ -27,9 +27,9 @@ export default function Awards() {
             </div>
 
             {/* Awards Grid */}
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+            <div className="awardsImgSection flex flex-wrap justify-evenly gap-6 md:gap-8">
                 {awardImages.map((img, index) => (
-                    <div key={index} className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex justify-center items-center bg-white shadow-md rounded-lg p-3">
+                    <div key={index} className="awardsContainer w-32 h-32 p-5 flex justify-between items-center bg-white shadow-md rounded-lg ">
                         <AwardCard img={img} />
                     </div>
                 ))}

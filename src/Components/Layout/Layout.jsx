@@ -3,11 +3,9 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 export default function Layout({ children }) {
     return (
-        <div>
-        <Header 
-            imgURL={img1}
-            />
-        {children}
+        <div >
+        <Header imgURL={img1}/>
+            {children}
         <Footer />
         </div>
     );

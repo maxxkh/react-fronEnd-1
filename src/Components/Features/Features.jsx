@@ -7,8 +7,8 @@ export default function Feature(props) {
         console.log('Feature Button Clicked')
     }
     return(
-        <section className='FeatureSection' >
-            <div className="Features lg:py-10 px-4 lg:px-20 lg:flex lg:items-center lg:flex-row-reverse ">
+        <section className='FeatureSection px-5 lg:px-60' >
+            <div className="Features  lg:py-10 lg:flex lg:items-center lg:justify-between lg:flex-row-reverse ">
                 <img className='FeatureImage lg:w-2/3' src={Img1} alt="" srcset="" />
                 <div>
 
@@ -30,7 +30,7 @@ export default function Feature(props) {
 
 
             <div className="Features lg:py-10 px-4 lg:px-20 lg:flex lg:justify-around lg:items-center lg:flex-row ">
-                <img className='FeatureImage lg:w-2/3' src={img2} alt="" srcset="" />
+                <img className='FeatureImage lg:w-2/3 lg:mr-32' src={img2} alt="" srcset="" />
                 <div>
 
                     <h3 className="text-cyan-500">FINTECH</h3>

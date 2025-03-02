@@ -8,7 +8,8 @@ export default function BasicButton(props) {
     else{
         styles ={
             border:'2px solid #e7107e',
-            color: `${props.color}`
+            color: `white`,
+            textShadow: `2px 2px 2px #e7107e`,
         }
     }
 

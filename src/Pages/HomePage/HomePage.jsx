@@ -19,7 +19,7 @@ const newsItems = [
     id: '1',
     title: 'Global Markets Reach New Highs',
     description: 'International stock indices surge amid positive economic indicators...',
-    imageUrl: '',
+    imageUrl: 'https://images.unsplash.com/photo-1738255594069-76385a01a31d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: '2',
@@ -35,26 +35,28 @@ const newsItems = [
 
 function HomePage() {
   return (
-    <>
+    <section className='pageBody' > 
 
-    <HeroSection
-      name='WE ARE ALTAR.IO'
-      mainText ='Custom Product & Software Development Focused On Your Success'
-    />
-    <Services/>
-    <Founder />
-    <Feature/>
-    <Team/>
-    <Awards/>
-    <Clients/>
-    <NewsCarousel
-      items={newsItems}
-      autoPlay={true}
-      interval={6000}
-    />
-    <FeedbackForm/>
-    <ContactSection/>
-    </>
+      <HeroSection
+      
+        name='WE ARE ALTAR.IO'
+        mainText ='Custom Product & Software Development Focused On Your Success'
+      />
+
+      <Services/>
+      <Founder />
+      <Feature/>
+      <Team/>
+      <Awards/>
+      <Clients/>
+      <NewsCarousel
+        items={newsItems}
+        autoPlay={true}
+        interval={6000}
+      />
+      <FeedbackForm/>
+      <ContactSection/>
+    </section>
   );
 }
 
