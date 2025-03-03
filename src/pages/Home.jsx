@@ -1,15 +1,15 @@
 
 import React from 'react';
-import HeroSection from '../../Components/HeroSection/HeroSection';
-import Services from '../../Components/ServicesSection/Services';
-import Founder from '../../Components/FounderInfo/FounderInfo';
-import Feature from '../../Components/Features/Features';
-import Awards from '../../Components/Awards/Awards';
-import Team from '../../Components/TeamSection/Team';
-import NewsCarousel from '../../Components/Carousel/Carousel';
-import FeedbackForm from '../../Components/Form/FeedbackForm';
-import ContactSection from '../../Components/ContactSection/ContactSection';
-import Clients from '../../Components/Clients/Clients';
+import HeroSection from '../Components/HeroSection/HeroSection';
+import Services from '../Components/ServicesSection/Services';
+import Founder from '../Components/FounderInfo/FounderInfo';
+import Feature from '../Components/Features/Features';
+import Awards from '../Components/Awards/Awards';
+import Team from '../Components/TeamSection/Team';
+import NewsCarousel from '../Components/Carousel/Carousel';
+import FeedbackForm from '../Components/Form/FeedbackForm';
+import ContactSection from '../Components/ContactSection/ContactSection';
+import Clients from '../Components/Clients/Clients';
 
 
 
@@ -17,7 +17,7 @@ import Clients from '../../Components/Clients/Clients';
 const newsItems = [
   {
     id: '1',
-    title: 'Global Markets Reach New Highs',
+    title: 'Tech Summit 2024',
     description: 'International stock indices surge amid positive economic indicators...',
     imageUrl: 'https://images.unsplash.com/photo-1738255594069-76385a01a31d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
@@ -27,18 +27,19 @@ const newsItems = [
     description: 'Leaders gather to discuss future of artificial intelligence in business...',
     imageUrl: 'https://plus.unsplash.com/premium_photo-1740708549031-fd00d8821c5b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8',
   },
+  {
+    id: '2',
+    title: 'Global Markets Reach New Highs',
+    description: 'Leaders gather to discuss future of artificial intelligence in business...',
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1736392070194-530edb275b36?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
 ];
 
 
-
-
-
-function HomePage() {
+function Home() {
   return (
     <section className='pageBody' > 
-
       <HeroSection
-      
         name='WE ARE ALTAR.IO'
         mainText ='Custom Product & Software Development Focused On Your Success'
       />
@@ -60,4 +61,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

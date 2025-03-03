@@ -1,7 +1,7 @@
 
 export default function Card(props) {
     return(
-        <section className="card serviceCards shadow-2xl p-5 h-64 bg-white rounded-xl" 
+        <section className="card cursor-pointer serviceCards shadow-2xl p-5 h-64 bg-white rounded-xl" 
         >
             <img src={props.imgURL} alt="service" srcset=""  />
             <div className="info">

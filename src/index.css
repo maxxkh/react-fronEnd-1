@@ -31,7 +31,6 @@ body{
   .services{
     display: flex;
     justify-content: space-around;
-    
     gap: 20px;
     margin: 0 12%;
     flex-direction: column;
@@ -64,13 +63,17 @@ body{
     justify-content: center;
   }
 
+  .awardsContainer{
+    width: 200px;
+  }
+
   .awardsContainer > :nth-child(1){
     width: 150px;
     height: 150px;
 
   }
   .serviceCards{
-    width: 45%;
+    width: 49%;
   }
   .FeatureSection{
     padding: 0 30px;
@@ -79,7 +82,7 @@ body{
   .Features{
     margin-bottom: 100px;
   }
-
+ 
 }
 
 

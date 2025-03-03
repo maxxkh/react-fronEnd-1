@@ -79,7 +79,7 @@ export default function Header(props) {
                 </div>
             </div>
             </div>
-
+            
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="toggleBar  absolute top-16 right-3 w-96 bg-white shadow-lg rounded-lg p-4 flex flex-col gap-3 lg:hidden ">
