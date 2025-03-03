@@ -12,9 +12,7 @@ export default function Awards() {
         "https://altar.io/wp-content/uploads/2023/09/image-7.png.webp",
         "https://altar.io/wp-content/uploads/2023/09/image-8.png",
         "https://altar.io/wp-content/uploads/2023/12/software_developers-1.svg",
-        "https://altar.io/wp-content/uploads/2023/12/clutch_1000_2022_award1-1024x856.png.webp",
-        "https://altar.io/wp-content/uploads/2023/12/top-software-development-companies-worldwide.webp"
-    ];
+       ];
 
     return (
         <section className="p-6 lg:p-16 bg-gray-50 ">

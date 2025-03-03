@@ -10,9 +10,9 @@ export default function Header(props) {
     };
     const menuLinks = [
         { name: "Home", href: "/react-fronEnd-1" },
-        { name: "Services", href: "/Services" },
+        { name: "Services", href: "/react-fronEnd-1/services" },
         { name: "Pricing", href: "/" },
-        { name: "About ", href: "/" },
+        { name: "About", href: "/react-fronEnd-1/about" },
         { name: "Careers", href: "/" },
         { name: "Tech", href: "/" },
         { name: "Blog", href: "/" }

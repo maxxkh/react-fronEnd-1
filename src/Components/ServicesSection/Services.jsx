@@ -21,6 +21,7 @@ export default function Services(props) {
                 className="text-gray-700 text lg:ml-[3%] text-xl leading-tight"
                 >
                 We help entrepreneurs and business leaders build and launch innovative custom software solutions to the market across a range of verticals & industries. We can help you turn your vision into a successful product together, whether it’s in the form of a Minimum Viable Product, UX/UI services, full product custom software development or help to scale your company.
+            
                 </p>
             </div>
 

@@ -9,9 +9,9 @@ function App() {
     <Router basename="/react-fronEnd-1">
       <Layout>
         <Routes>
-          <Route index  path="/" element={<Home />} />
-          <Route path="/react-fronEnd-1/Services" element={<Services />} />
-          <Route path="/About" element={<About />} />
+          <Route index element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
     </Router>
