@@ -6,12 +6,11 @@ import Founder from '../Components/FounderInfo/FounderInfo';
 import Feature from '../Components/Features/Features';
 import Awards from '../Components/Awards/Awards';
 import Team from '../Components/TeamSection/Team';
-import NewsCarousel from '../Components/Carousel/Carousel';
 import FeedbackForm from '../Components/Form/FeedbackForm';
 import ContactSection from '../Components/ContactSection/ContactSection';
 import Clients from '../Components/Clients/Clients';
-
 import founderImage from '../Components/SiteAssets/ImagesAssets/cta-colors-philip-still-919x1024.png.webp'
+import CarouselV2 from '../Components/Carousel';
 
 
 
@@ -56,11 +55,8 @@ function Home() {
       <Team/>
       <Awards/>
       <Clients/>
-      <NewsCarousel
-        items={newsItems}
-        autoPlay={true}
-        interval={6000}
-      />
+
+      <CarouselV2/>
       <FeedbackForm/>
       <ContactSection/>
     </section>

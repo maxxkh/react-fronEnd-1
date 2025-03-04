@@ -11,6 +11,7 @@ body{
 .FeatureSection{
   background-color: rgb(16, 16, 43);
 }
+
 .PrimaryButton{
   width: auto;
   color: antiquewhite;
@@ -62,12 +63,16 @@ body{
     display: flex;
     justify-content: center;
   }
-
+  .clientLogo{
+    width: 300px;
+  }
   .awardsContainer{
+
     width: 200px;
   }
 
   .awardsContainer > :nth-child(1){
+    
     width: 150px;
     height: 150px;
 
@@ -221,3 +226,9 @@ body{
   /* } */
 
 
+/* service page */
+
+.clientLogo{
+  width: 120px;
+  height: auto;
+}
