@@ -43,7 +43,7 @@ const data = [
 
 export default function AccordionUsage() {
   return (
-    <div>
+    <div className=' lg:mx-56'>
         {data.map((item) => (
             <Accordion key={item.id}>
                 <AccordionSummary
@@ -51,7 +51,9 @@ export default function AccordionUsage() {
                 aria-controls="panel1-content"
                 id="panel1-header"
                 >
-                <Typography component="span"><span  className='font-semibold text-xl'>{item.title}</span> </Typography>
+                    <span className='p-4 '>
+                        <Typography component="span"><span  className='accordiantitle font-semibold text-xl'>{item.title}</span> </Typography>
+                    </span>
                 </AccordionSummary>
                 <AccordionDetails>
                     <span  className=' text-[17px] text-gray-700'>
@@ -60,8 +62,6 @@ export default function AccordionUsage() {
                 </AccordionDetails>
             </Accordion>
         ))}
-   
-      
     </div>
   );
 }

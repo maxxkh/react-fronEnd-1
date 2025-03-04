@@ -9,21 +9,21 @@ function CarouselV2() {
   const carouselData = [
     {
       image: "https://altar.io/wp-content/uploads/2024/11/Screenshot-2024-11-06-at-18.22.40-1024x565.png.webp",
-      title: "Capital One",
+      title: "Krepling",
       description:
         "Capital One Shopping looks for better offers, instantly searches for and applies available coupon codes at checkout.",
     },
     {
       image: "https://altar.io/wp-content/uploads/2023/12/SYNAPSE-1-1024x533.png.webp",
-      title: "Another Title",
+      title: "Synapse",
       description:
-        "This is another example description for the carousel item.",
+        'Synapse Credit is a fintech tool developed in partnership with AlixPartners that allows financial institutions to assess the credit scoring of offline retailers.',
     },
     {
       image: "https://altar.io/wp-content/uploads/2023/11/Ovvio-Cover-1024x584.png.webp",
-      title: "Yet Another Title",
+      title: "Ovvio",
       description:
-        "This is yet another example description for the carousel item.",
+      "Ovvio is a peer-to-peer knowledge-sharing platform where “Knowledge Seekers” can get in touch with the right “Knowledge Giver” that has the right experience and wisdom to answer their questions. Givers have a direct channel to monetise their knowledge and wisdom just by sharing it with Seekers on peer-to-peer dynamics.",
     },
   ];
 

@@ -17,12 +17,14 @@ const data = [
 
 export default function Qualities(params) {
     return(
-        <section className="QualitiesSection overflow-x-hidden bg-white my-10 py-10 px-5">
+        <section className="QualitiesSection lg:px-56 lg:inline-flex overflow-x-hidden  bg-white my-10 py-10 px-5">
+            <div className="textContainer lg:w-[40%]">
+
                 <div className="topText">
                     <h1 className="text-4xl font-bold">Why choose Altar for your next business venture?</h1>
                     <p className="text-gray-700 mt-5 text-[16px] font-semibold">Our company was formed by ex-startup founders that learned how to bring new innovative products to market by doing it.</p>
                 </div>
-                <div className="qualities pt-10">
+                <div className="qualities lg:px-5  pt-10">
                     {data.map((item, index) => (
                         <div key={index} className="qualityCard mt-5 bg-white shadow-md rounded-lg p-5">
                             <h1 className="  text-[156x] font-bold flex items-center gap-3">
@@ -33,13 +35,14 @@ export default function Qualities(params) {
                         </div>
                     ))}
                 </div>
-                <div className="img h-screen w-[1000px] ">
-                    <img
-                        className="w-full h-auto translate-x-[-150px] md:translate-x-0 md:w-[800px]"
-                        src="https://altar.io/wp-content/uploads/2023/12/fave-mockup-phone.png"
-                        alt="Fave Mockup Phone"
-                    />  
-                </div>
+            </div>
+            <div className="img h-screen w-[1000px]  lg:w-[800px] overflow-hidden ">
+                <img
+                    className="w-full h-auto translate-x-[-150px] md:translate-x-0 md:w-[800px]"
+                    src="https://altar.io/wp-content/uploads/2023/12/fave-mockup-phone.png"
+                    alt="Fave Mockup Phone"
+                />  
+            </div>
         </section>
     )
 }

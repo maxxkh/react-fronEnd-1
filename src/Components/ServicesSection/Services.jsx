@@ -10,7 +10,7 @@ import Card from "./Card/Card"
 export default function Services(props) {
     console.log(img1)
     return(
-        <section className=" services "
+        <section className=" services md:mx-0 lg:mx-48 "
      
         >
             <div className="serviceInfo lg:w-2/4 ">
@@ -24,8 +24,7 @@ export default function Services(props) {
             
                 </p>
             </div>
-
-            <div className="cards flex flex-wrap lg:justify-center lg:gap-3 items-center  mt-10 " >
+            <div className="cards flex flex-wrap lg:justify-center lg:gap-3 items-center mt-10 " >
                 <Card
                     imgURL={img1}
                     name="Product Scope"

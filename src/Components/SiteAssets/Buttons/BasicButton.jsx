@@ -1,27 +1,22 @@
+import { colors } from "@mui/material"
 export default function BasicButton(props) {
-    let styles = {}
-    if(props.filled){
-        styles={
-            backgroundColor: '#e7107e',
-        }
-    }
-    else{
-        styles ={
-            border:'2px solid #e7107e',
-            color: `white`,
-            textShadow: `2px 2px 2px #e7107e`,
-        }
-    }
-
-
-    return(
-        <button 
-                onClick={props.handleClick} 
-                className="PrimaryButton"
-                style={styles}>
-
-                    
+    return (
+        <button
+            onClick={props.handleClick}
+            className={`
+                px-4 py-2 
+                border-2 
+                border-[#e7107e] 
+                ${props.filled ? 'bg-[#e90e7f] text-white' : 'bg-transparent text-[#e90e7f]'}
+                hover:bg-[#e90e7f] 
+                hover:text-white 
+                font-semibold
+                transition-colors 
+                duration-300
+                rounded-3xl
+            `}
+        >
             {props.ButtonText}
         </button>
-    )
+    );
 }
