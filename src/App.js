@@ -4,7 +4,7 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
-import PricingCard from './Components/SiteAssets/Cards/PricingCard';
+import Pricing from './pages/Pricing';
 function App() {
   return (
     <Router basename="/react-fronEnd-1">
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/pricing" element={<PricingCard/> } />
+          <Route path="/pricing" element={<Pricing/> } />
           <Route path="/about" element={<About />} />
         </Routes>
       </Layout>

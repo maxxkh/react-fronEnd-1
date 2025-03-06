@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 
 body{
   background-color: rgb(242, 242, 242);
@@ -172,7 +175,7 @@ body{
 
   .founder{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
   }
 
 
@@ -184,7 +187,6 @@ body{
     align-items: start;
     width: 100%;
     height: 60vh;
-    background-color: rgb(16, 13, 43);
     padding: 20px 0;
   }
 

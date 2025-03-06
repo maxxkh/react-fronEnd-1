@@ -1,5 +1,6 @@
 import React from "react";
 import BasicButton from "../SiteAssets/Buttons/BasicButton";
+import TeamCard from "./TeamCard";
 
 const teamData = [
     {
@@ -24,16 +25,13 @@ export default function TeamSection() {
         <div className="mx-auto container lg:px-20 md:px-6 px-4 py-12">
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 pb-12 pt-20">
                 {teamData.map((team, index) => (
-                    <div key={index} className="w-full flex items-center justify-center flex-col">
-                        <div className="w-full px-5 -mb-10 relative z-40">
-                            <img src={team.imgSrc} alt="team member" className="w-full h-full rounded-md" />
-                        </div>
-                        <div className="flex justify-center flex-col gap-5 px-10 pb-8 pt-14 bg-white items-center rounded-md lg:px-20 w-full">
-                            <p className="text-xl font-semibold leading-5 text-center text-black">{team.title}</p>
-                            <p className="text-base leading-4 mt-2 text-center text-black ">{team.info}</p>
-                            <BasicButton ButtonText="Contact Me" filled={true} />
-                        </div>
-                    </div>
+
+                    <TeamCard
+                        imgSrc={team.imgSrc}
+                        title={team.title}
+                        info={team.info}
+                    />
+                
                 ))}
             </div>
         </div>
