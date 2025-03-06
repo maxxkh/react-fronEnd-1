@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/react-fronEnd-1/static/css/main.0722afba.css",
-    "main.js": "/react-fronEnd-1/static/js/main.62599694.js",
-    "static/media/fave-cover.png": "/react-fronEnd-1/static/media/fave-cover.f9a371ae11aa6940e77c.png",
-    "static/media/General-Snapshot-2048x972.png.webp": "/react-fronEnd-1/static/media/General-Snapshot-2048x972.png.0f306b9351095a8da0fa.webp",
+    "main.css": "/react-fronEnd-1/static/css/main.a027b8be.css",
+    "main.js": "/react-fronEnd-1/static/js/main.ffa75697.js",
     "static/media/cta-colors-philip-still-919x1024.png.webp": "/react-fronEnd-1/static/media/cta-colors-philip-still-919x1024.png.c542b9a3d77d4a2f399c.webp",
-    "static/media/Group-2448.png.webp": "/react-fronEnd-1/static/media/Group-2448.png.1e55200dc4352edea998.webp",
     "static/media/altar-logo__full__transparent-color-dark.svg": "/react-fronEnd-1/static/media/altar-logo__full__transparent-color-dark.1d82a40e0083a1460c8b8add60e926dc.svg",
     "index.html": "/react-fronEnd-1/index.html",
-    "main.0722afba.css.map": "/react-fronEnd-1/static/css/main.0722afba.css.map",
-    "main.62599694.js.map": "/react-fronEnd-1/static/js/main.62599694.js.map"
+    "main.a027b8be.css.map": "/react-fronEnd-1/static/css/main.a027b8be.css.map",
+    "main.ffa75697.js.map": "/react-fronEnd-1/static/js/main.ffa75697.js.map"
   },
   "entrypoints": [
-    "static/css/main.0722afba.css",
-    "static/js/main.62599694.js"
+    "static/css/main.a027b8be.css",
+    "static/js/main.ffa75697.js"
   ]
 }
