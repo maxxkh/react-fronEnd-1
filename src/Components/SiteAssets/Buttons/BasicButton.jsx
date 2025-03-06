@@ -4,7 +4,9 @@ export default function BasicButton(props) {
         <button
             onClick={props.handleClick}
             className={`
-                px-4 py-2 
+                px-10 
+                py-2
+                font-semibold
                 border-2 
                 border-[#e7107e] 
                 ${props.filled ? 'bg-[#e90e7f] text-white' : 'bg-transparent text-[#e90e7f]'}
@@ -12,6 +14,7 @@ export default function BasicButton(props) {
                 hover:text-white 
                 font-semibold
                 transition-colors 
+                min-w-40
                 duration-300
                 rounded-3xl
             `}
