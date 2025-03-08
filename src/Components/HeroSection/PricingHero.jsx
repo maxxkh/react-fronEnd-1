@@ -7,7 +7,7 @@ const PricingHero = () => {
         <div className='md:min-w-[500px]'>
         <WebsiteProjectPlans/>
         </div>
-        <div className='bg-white w-[90%] md:flex md:flex-col md:justify-between md:h-[600px] h-64  md:w-[300px] rounded-xl m-5 p-6 lg:h-[300px] lg:mt-[300px]'>
+        <div className='bg-white w-[90%] md:flex md:flex-col md:justify-between md:h-[600px] h-64  md:w-[300px] rounded-xl m-5 p-6 lg:h-[300px] lg:mt-[400px]'>
           <div>
           <h3 className='text-2xl font-semibold'>Building a Fintech Application? </h3>
           <p className='text-gray-600 pt-5'>Then you should talk to me. I'm an expert in Fintech Applications and I'll be glad to discuss the project with you and also give you a correct estimation for it.</p>

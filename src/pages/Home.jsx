@@ -55,7 +55,6 @@ function Home() {
       <Team/>
       <Awards/>
       <Clients/>
-
       <CarouselV2/>
       <FeedbackForm/>
       <ContactSection/>

@@ -97,9 +97,9 @@ const webFrameworks = {
 
   export default function TechInfo() {
     return (
-      <section className="techinfo lg:px-56 bg-gray-50 py-10 px-5">
+      <section  className="techinfo lg:px-56 bg-gray-50 py-10 px-5">
      <div className="text">
-         <h3 className=" text-6xl font-bold ">The tech behind our products</h3>
+         <h3 className=" text-5xl font-bold ">The tech behind our products</h3>
          <p className="text-gray-700 mt-5 text-[16px] font-semibold lg:w-[600px]">
            Our team of experts is proficient in a wide range of technologies,
            ensuring we can deliver the best possible solution for your project. We

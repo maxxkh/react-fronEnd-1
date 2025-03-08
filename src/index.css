@@ -15,6 +15,12 @@ body{
   background-color: rgb(16, 16, 43);
 }
 
+
+.sbmenuItem:hover .subMenuText{
+  color: white !important;
+}
+
+
 .PrimaryButton{
   width: auto;
   color: antiquewhite;
@@ -231,3 +237,16 @@ body{
   width: 120px;
   height: auto;
 }
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////// tech animation////////////////////////// */ 
+
+
+
+
