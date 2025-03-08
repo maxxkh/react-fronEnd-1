@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-fronEnd-1/static/css/main.a027b8be.css",
-    "main.js": "/react-fronEnd-1/static/js/main.ffa75697.js",
+    "main.css": "/react-fronEnd-1/static/css/main.571ee03a.css",
+    "main.js": "/react-fronEnd-1/static/js/main.00eef6d3.js",
     "static/media/cta-colors-philip-still-919x1024.png.webp": "/react-fronEnd-1/static/media/cta-colors-philip-still-919x1024.png.c542b9a3d77d4a2f399c.webp",
     "static/media/altar-logo__full__transparent-color-dark.svg": "/react-fronEnd-1/static/media/altar-logo__full__transparent-color-dark.1d82a40e0083a1460c8b8add60e926dc.svg",
     "index.html": "/react-fronEnd-1/index.html",
-    "main.a027b8be.css.map": "/react-fronEnd-1/static/css/main.a027b8be.css.map",
-    "main.ffa75697.js.map": "/react-fronEnd-1/static/js/main.ffa75697.js.map"
+    "main.571ee03a.css.map": "/react-fronEnd-1/static/css/main.571ee03a.css.map",
+    "main.00eef6d3.js.map": "/react-fronEnd-1/static/js/main.00eef6d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.a027b8be.css",
-    "static/js/main.ffa75697.js"
+    "static/css/main.571ee03a.css",
+    "static/js/main.00eef6d3.js"
   ]
 }
