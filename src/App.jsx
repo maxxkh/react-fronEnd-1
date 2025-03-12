@@ -11,7 +11,7 @@ import TechPage from './Components/TechPage/TechPage';
 
 function App() {
   return (
-    <Router basename="/react-fronEnd-1">
+    <Router basename="/">
       <Layout>
         <Routes>
           <Route index element={<Home />} />

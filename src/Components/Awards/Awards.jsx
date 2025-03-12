@@ -12,22 +12,22 @@ export default function Awards() {
         "https://altar.io/wp-content/uploads/2023/09/image-7.png.webp",
         "https://altar.io/wp-content/uploads/2023/09/image-8.png",
         "https://altar.io/wp-content/uploads/2023/12/software_developers-1.svg",
-       ];
+    ];
 
     return (
-        <section className="p-6 lg:p-16 bg-gray-50 ">
+        <section className="p-6 lg:p-16 bg-gray-50">
             {/* Header Section */}
-            <div className="text-center mb-8 lg:mb-12">
+            <div className="text-center mb-6 lg:mb-10">
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900">Awards</h3>
                 <p className="text-gray-600 text-lg mt-2 max-w-2xl mx-auto">
                     We are voted a Top Firm by Entrepreneurs and Business Leaders just like you.
                 </p>
             </div>
-
-            {/* Awards Grid */}
-            <div className="awardsImgSection flex flex-wrap justify-evenly gap-6 md:gap-8">
+            
+            {/* Responsive Awards Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-4 md:gap-6 place-items-center lg:px-10">
                 {awardImages.map((img, index) => (
-                    <div key={index} className="awardsContainer w-32 h-32 p-5 flex justify-between items-center bg-white shadow-md rounded-lg ">
+                    <div key={index} className="w-36 h-36 md:w-44 md:h-44 flex items-center justify-center bg-white shadow-md rounded-lg p-3">
                         <AwardCard img={img} />
                     </div>
                 ))}

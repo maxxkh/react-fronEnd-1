@@ -66,29 +66,34 @@ const projects = [
 
 const Pricing = () => {
   return (
-    <section className="pricingPage">
-      <PricingHero/>
+    <section className="pricingPage overflow-x-hidden">
+      <PricingHero />
       <Founder
-        founderImage='https://altar.io/wp-content/uploads/2023/09/pricing1.png.webp'
-        title='Recent Examples'
-        description='Here are some examples of projects we worked on over the last few months. This will help you understand how pricing can vary depending on factors like size and complexity.'
+        founderImage="https://altar.io/wp-content/uploads/2023/09/pricing1.png.webp"
+        title="Recent Examples"
+        description="Here are some examples of projects we worked on over the last few months. This will help you understand how pricing can vary depending on factors like size and complexity."
       />
-      <div className='flex px-5  flex-col flex-wrap gap-5 py-10 md:flex md:flex-col lg:mx-56 lg:flex  lg:flex-row lg:justify-center'>
+
+      {/* Responsive Cards Grid with Dynamic Margins */}
+      <div className="px-5 py-10 grid gap-6 
+        sm:grid-cols-1 sm:mx-2 
+        md:grid-cols-2 md:mx-0 
+        lg:grid-cols-3 lg:mx-20 xl:mx-56">
         {projects.map((project, index) => (
           <PricingCard
             key={index}
-            name={project.name} 
+            name={project.name}
             cost={project.cost}
             duration={project.duration}
             description={project.description}
           />
         ))}
       </div>
-      <PriceInfo/>
-      <Services/>
-      <div className='py-20'>
-      </div>
-      <ContactSection/>
+
+      <PriceInfo />
+      <Services />
+      <div className="py-20"></div>
+      <ContactSection />
     </section>
   );
 };

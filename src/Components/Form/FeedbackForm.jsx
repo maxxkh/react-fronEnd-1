@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { db } from '../../firebase'; // Import Firestore
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +24,7 @@ const FeedbackForm = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     
@@ -42,17 +44,32 @@ const FeedbackForm = () => {
     }
 
     setIsSubmitting(true);
-    
-    setTimeout(() => {
+
+    try {
+      // Firestore submission
+      await addDoc(collection(db, 'feedback'), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: serverTimestamp()
+      });
+
+      // Reset form and show success
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
+      
+      // Auto-hide success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1500);
-  };
+    } catch (err) {
+      console.error('Error saving feedback:', err);
+      setError('Failed to submit feedback. Please try again.');
+      setIsSubmitting(false);
+    }
+  }; // 🚨 Added missing closing brace for handleSubmit
 
   return (
-    <div className="max-w-7xl  mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex my-8">
+    <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex my-8">
       <div className="hidden md:block md:w-1/2">
         <img 
           src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

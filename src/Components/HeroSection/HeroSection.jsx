@@ -1,26 +1,4 @@
 import BasicButton from "../SiteAssets/Buttons/BasicButton"
-// export default function HeroSection(props) {
-    // const onClick = () =>{
-    //     console.log('Hero Button Clicked')
-    // }
-
-//     return(
-//         <section className="heroSection px-4">
-//             <h3>{props.name}</h3>
-//             <h1 className=" mb-4 leading-tight">
-//                 {props.mainText}
-//             </h1>
-//             <BasicButton
-//                     ButtonText="Book a Call"
-//                     filled={false}
-//                     handleClick={onClick}
-//                 />
-//         </section>
-//     )
-// }
-
-
-/* <img className="ml-5" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hero3-svg3.svg" alt="arrows" /> */
 
 import React  from 'react'
 
@@ -29,9 +7,8 @@ export default function HeroSection(props) {
         console.log('Hero Button Clicked')
     }
 
-
   return (
-    <div class=" bg-slate-950 h-screen md:h-[600px] lg:h-3/6 lg:pb-52 lg:pl-40" >
+    <div class=" bg-slate-950 h-screen md:h-[600px] lg:h-screen lg:pb-52 lg:pl-40" >
         <div className="mx-auto container relative px-6 pt-7 xl:px-0">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center">
           <div className="xl:mt-8">
@@ -46,10 +23,9 @@ export default function HeroSection(props) {
                     ButtonText="Book a Call"
                     filled={false}
                     handleClick={onClick}
-                />
+            />
             </div>
           </div>
-  
         </div>
       </div>
     </div>

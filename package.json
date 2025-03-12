@@ -2,7 +2,7 @@
   "name": "my-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maxxkh.github.io/react-fronEnd-1",
+  "homepage": "https://maxxkh.github.io/",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -13,6 +13,8 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "firebase": "^11.4.0",
     "gh-pages": "^6.3.0",
     "lucide-react": "^0.479.0",
     "pure-react-carousel": "^1.32.0",
@@ -20,20 +22,21 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0",
-    "react-scripts": "^5.0.1",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "styled-components": "^6.1.15",
     "swiper": "^11.2.4",
+    "vite": "^6.2.1",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --watch=false"
   },
   "eslintConfig": {
     "extends": [
@@ -54,9 +57,12 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
+    "@vitest/coverage-v8": "^3.0.8",
+    "autoprefixer": "^10.4.21",
+    "jsdom": "^26.0.0",
+    "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
+    "vitest": "^3.0.8",
     "webpack": "^5.98.0",
     "webpack-dev-server": "^5.2.0"
   }

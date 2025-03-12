@@ -1,5 +1,9 @@
-export default function AwardCard(props) {
-    return(
-            <img src={props.img} alt="" className="awardImg lg:w-32" />
-    )
+export default function AwardCard({ img }) {
+    return (
+        <img 
+            src={img} 
+            alt="Award" 
+            className="w-full h-full object-contain"
+        />
+    );
 }

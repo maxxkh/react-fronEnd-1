@@ -12,13 +12,13 @@ export default function Header(props) {
     };
 
     const menuLinks = [
-        { name: "Home", href: "/react-fronEnd-1" },
-        { name: "Services", href: "/react-fronEnd-1/services" },
-        { name: "Pricing", href: "/react-fronEnd-1/pricing" },
-        { name: "About", href: "/react-fronEnd-1/about" },
-        { name: "Careers", href: "/react-fronEnd-1/career" },
-        { name: "Tech", href: "/react-fronEnd-1/tech" },
-        { name: "Blog", href: "/react-fronEnd-1/blog" }
+        { name: "Home", href: "/" },
+        { name: "Services", href: "/services" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "About", href: "/about" },
+        { name: "Careers", href: "/career" },
+        { name: "Tech", href: "/tech" },
+        { name: "Blog", href: "/blog" }
     ];
 
     const services = [
