@@ -66,7 +66,7 @@ const FeedbackForm = () => {
       setError('Failed to submit feedback. Please try again.');
       setIsSubmitting(false);
     }
-  }; // 🚨 Added missing closing brace for handleSubmit
+  }; 
 
   return (
     <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex my-8">
@@ -142,7 +142,7 @@ const FeedbackForm = () => {
                 <p>{error}</p>
               </div>
             )}
-            
+        
             <button
               type="submit"
               disabled={isSubmitting}
