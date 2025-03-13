@@ -42,9 +42,7 @@ const FeedbackForm = () => {
       setError('Please enter your message');
       return;
     }
-
     setIsSubmitting(true);
-
     try {
       // Firestore submission
       await addDoc(collection(db, 'feedback'), {
@@ -79,11 +77,14 @@ const FeedbackForm = () => {
       </div>
       <div className="w-full md:w-1/2 p-8">
         <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-1">
-          We value your feedback
+          Talk to us and get your project moving!
         </div>
         <h2 className="text-xl font-bold text-gray-900 mb-6">
-          Share your thoughts with us
+          We will respond to you within 24 hours.
         </h2>
+        <p className="text-gray-600 mb-6">
+          You'll be talking to product and tech experts (no account managers).
+        </p>
         
         {isSubmitted ? (
           <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6">
