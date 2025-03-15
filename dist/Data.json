@@ -1,0 +1,8 @@
+[
+    { "month": "Jan", "completed": 5 },
+    { "month": "Feb", "completed": 7 },
+    { "month": "Mar", "completed": 2 },
+    { "month": "Apr", "completed": 10 },
+    { "month": "May", "completed": 5 },
+    { "month": "Jun", "completed": 18 }
+]

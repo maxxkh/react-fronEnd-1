@@ -1,12 +1,15 @@
+
 import React, { useState, useEffect } from "react";
+import LineChartComponent from './Chart/LineChartComponent'
 
 export default function DashBoard() {
     const [show, setShow] = useState(false); // For mobile navigation
     const [editModalOpen, setEditModalOpen] = useState(false); // For edit profile modal
-    const [username, setUsername] = useState("Andres Berlin"); // Default username
+    const [username, setUsername] = useState("User-001"); // Default username
     const [profileImage, setProfileImage] = useState(
         "https://cdn.tuk.dev/assets/webapp/master_layouts/boxed_layout/boxed_layout2.jpg"
-    ); // Default profile image
+    ); 
+
 
     // Load saved username and profile image from localStorage on component mount
     useEffect(() => {
@@ -42,12 +45,12 @@ export default function DashBoard() {
 
     return (
         <>
-            <div className="bg-gray-200 pb-10">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen pb-10">
                 {/* Navigation starts */}
                 {/* Mobile */}
                 <div className={show ? "w-full h-full absolute z-40 transform translate-x-0 " : " w-full h-full absolute z-40 transform -translate-x-full"}>
                     <div className="bg-gray-800 opacity-50 inset-0 fixed w-full h-full" onClick={() => setShow(!show)} />
-                    <div className="w-64 z-20 absolute left-0 z-40 top-0 bg-white shadow flex-col justify-between transition duration-150 ease-in-out h-full">
+                    <div className="w-64 z-20 absolute left-0 z-40 top-0 bg-white shadow-lg flex-col justify-between transition duration-150 ease-in-out h-full">
                         <div className="flex flex-col justify-between h-full">
                             <div className="px-6 pt-4">
                                 <div className="flex items-center justify-between">
@@ -76,18 +79,18 @@ export default function DashBoard() {
                 </div>
 
                 {/* Dashboard Header */}
-                <div className="bg-gray-800 pt-8 pb-16 relative z-10">
+                <div className="bg-gradient-to-r from-purple-600 to-blue-700 pt-8 pb-16 relative z-10 shadow-lg">
                     <div className="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
                         <div className="flex-col flex lg:flex-row items-start lg:items-center">
                             <div className="flex items-center">
                                 <img
-                                    className="border-2 shadow border-gray-600 rounded-full mr-3 w-12 h-12 object-cover"
+                                    className="border-2 shadow-lg border-white rounded-full mr-3 w-12 h-12 object-cover"
                                     src={profileImage}
                                     alt="Profile"
                                 />
                                 <div>
                                     <h5 className="text-sm text-white leading-4 mb-1">{username}</h5>
-                                    <p className="text-xs text-gray-400 leading-4">VP Operations</p>
+                                    <p className="text-xs text-gray-200 leading-4">Web Dev</p>
                                 </div>
                             </div>
                             <div className="ml-0 lg:ml-20 my-6 lg:my-0">
@@ -96,7 +99,7 @@ export default function DashBoard() {
                         </div>
                         <div>
                             <button
-                                className="focus:outline-none transition duration-150 ease-in-out hover:bg-gray-200 border bg-white rounded text-indigo-700 px-8 py-2 text-sm"
+                                className="focus:outline-none transition duration-150 ease-in-out hover:bg-gray-200 border bg-white rounded text-indigo-700 px-8 py-2 text-sm shadow-lg"
                                 onClick={() => setEditModalOpen(true)}
                             >
                                 Edit Profile
@@ -106,84 +109,81 @@ export default function DashBoard() {
                 </div>
 
                 {/* Edit Profile Modal */}
-                {editModalOpen && (
-  <div className="fixed inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out animate-fade">
-    <div className="bg-white p-8 rounded-2xl w-96 shadow-2xl transform transition-all scale-95 animate-slideUp">
-      <h2 className="text-3xl font-extrabold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
-        Edit Profile
-      </h2>
-
-      <form onSubmit={handleProfileUpdate} className="space-y-6">
-        {/* Username Input */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Username
-          </label>
-          <input
-            type="text"
-            name="username"
-            defaultValue={username}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gradient-to-r from-purple-400 to-blue-500 focus:outline-none transition"
-          />
+{editModalOpen && (
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-white p-8 rounded-xl w-full max-w-md shadow-xl transform transition-all border border-gray-100">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                Edit Profile
+                <span className="block w-12 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mt-2 mx-auto rounded-full"></span>
+            </h2>
+            <form onSubmit={handleProfileUpdate} className="space-y-6">
+                <div>
+                    <label className="block text-sm font-medium text-gray-500 mb-2">Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        defaultValue={username}
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-3 focus:ring-purple-500/30 focus:border-purple-500 outline-none transition-all"
+                    />
+                </div>
+                <div>
+                    <label className="block text-sm font-medium text-gray-500 mb-2">Profile Image</label>
+                    <div className="flex items-center gap-3">
+                        <input
+                            id="profileImage"
+                            type="file"
+                            name="profileImage"
+                            className="hidden"
+                        />
+                        <label
+                            htmlFor="profileImage"
+                            className="px-5 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white rounded-lg font-medium cursor-pointer transition-all shadow-sm hover:shadow-md"
+                        >
+                            Upload
+                        </label>
+                        <span className="text-gray-400 text-sm">PNG, JPG up to 2MB</span>
+                    </div>
+                </div>
+                <div className="flex justify-end gap-4 mt-8">
+                    <button
+                        type="button"
+                        className="px-6 py-2.5 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg border border-gray-200 transition-all"
+                        onClick={() => setEditModalOpen(false)}
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        type="submit"
+                        className="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg font-medium transition-all shadow-sm hover:shadow-md"
+                    >
+                        Save Changes
+                    </button>
+                </div>
+            </form>
         </div>
-
-        {/* Profile Image Upload */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Profile Image
-          </label>
-          <div className="flex items-center space-x-3">
-            <input
-              id="profileImage"
-              type="file"
-              name="profileImage"
-              className="hidden"
-            />
-            <label
-              htmlFor="profileImage"
-              className="px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg hover:from-green-500 hover:to-blue-600 transition cursor-pointer text-sm"
-            >
-              Choose File
-            </label>
-            <span className="text-gray-500 text-sm">No file chosen</span>
-          </div>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex justify-end space-x-3 pt-4">
-          <button
-            type="button"
-            className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-            onClick={() => setEditModalOpen(false)}
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-700 text-white rounded-lg hover:from-purple-700 hover:to-blue-800 transition shadow-lg"
-          >
-            Save
-          </button>
-        </div>
-      </form>
     </div>
-  </div>
 )}
 
                 {/* Dashboard Content */}
                 <div className="container px-6 mx-auto">
-                    <div className="rounded shadow relative bg-white z-10 -mt-8 mb-8 w-full p-6">
-                        <h3 className="text-xl font-bold mb-4">Welcome to Your Dashboard</h3>
-                        <p className="text-gray-600">
+                    <div className="rounded-lg shadow-lg relative bg-white z-10 -mt-8 mb-8 w-full p-6">
+                        <h3 className="text-2xl font-bold mb-4 text-gray-800">Welcome to Your Dashboard</h3>
+                        <p className="text-gray-600 mb-6">
                             Here’s a quick overview of your account and activities.
                         </p>
                         <div className="mt-6">
-                            <h4 className="text-lg font-semibold mb-2">Recent Activity</h4>
+                            <h4 className="text-lg font-semibold mb-4 text-gray-800">Recent Activity</h4>
                             <ul className="list-disc list-inside text-gray-600">
                                 <li>Updated profile information</li>
                                 <li>Submitted a new project request</li>
                                 <li>Viewed project progress</li>
                             </ul>
+                        </div>
+                        <div className="mt-8">
+                        <h4 className="text-lg font-semibold mb-4 text-gray-800">Projects Completed Over Time</h4>
+                        <div className="h-fit">
+                                <LineChartComponent />
+                            </div>
                         </div>
                     </div>
                 </div>

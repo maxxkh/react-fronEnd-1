@@ -1,3 +1,4 @@
+
 {
   "hosting": {
     "public": "dist",
@@ -7,6 +8,10 @@
       "**/node_modules/**"
     ],
     "rewrites": [
+      {
+        "source": "/Data.json",
+        "destination": "/Data.json"
+      },
       {
         "source": "**",
         "destination": "/index.html"

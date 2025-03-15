@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const MobileMenu = ({ isOpen, onClose, menuLinks }) => {
   const menuRef = useRef(null);
+  const previousFocusRef = useRef(null);
 
   // Close menu when clicking outside or pressing Escape
   useEffect(() => {
@@ -16,6 +17,8 @@ const MobileMenu = ({ isOpen, onClose, menuLinks }) => {
     };
 
     if (isOpen) {
+      // Store the currently focused element
+      previousFocusRef.current = document.activeElement;
       document.addEventListener("mousedown", handleClickOutside);
       document.addEventListener("keydown", handleEscape);
       document.body.classList.add("overflow-hidden");
@@ -25,6 +28,11 @@ const MobileMenu = ({ isOpen, onClose, menuLinks }) => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEscape);
       document.body.classList.remove("overflow-hidden");
+
+      // Restore focus to the previously focused element
+      if (previousFocusRef.current) {
+        previousFocusRef.current.focus();
+      }
     };
   }, [isOpen, onClose]);
 
@@ -41,7 +49,7 @@ const MobileMenu = ({ isOpen, onClose, menuLinks }) => {
       ref={menuRef}
       role="dialog"
       aria-modal="true"
-      className={`fixed inset-0 top-16 z-50 lg:hidden
+      className={`fixed inset-0 z-50 lg:hidden
         transform transition-all duration-300 ease-out
         ${isOpen ? "translate-x-0" : "translate-x-full"}
         bg-white dark:bg-gray-800 shadow-xl
@@ -49,8 +57,16 @@ const MobileMenu = ({ isOpen, onClose, menuLinks }) => {
     >
       <div className="p-4">
         {/* Close button */}
-
-
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 px-3 py-1 rounded-2xl border
+            text-gray-800 dark:text-gray-100
+            hover:bg-gray-100 dark:hover:bg-gray-700
+            focus:outline-none focus:ring-2 focus:ring-pink-500"
+          aria-label="Close menu"
+        >
+          <span className="text-20 text-white ">×</span>
+        </button>
         {/* Menu links */}
         <nav className="flex flex-col gap-2 mt-8">
           {menuLinks.map((link) => (
