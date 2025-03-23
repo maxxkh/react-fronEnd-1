@@ -1,6 +1,6 @@
 # React Front-End Project
 
-This is a basic React front-end project created by [maxxkh](https://github.com/maxxkh).
+This is a basic React front-end project created by [YasinMalak](https://github.com/maxxkh).
 
 live on (https://fir-auth-bf9ed.web.app)
 ## Overview
